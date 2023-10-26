@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import RegistrationForm from '../utils/RegistrationForm'
 
 const RegistrationPage = () => {
   const [message, setMessage] = useState('')
   const [loading, setLoading] = useState(false)
   
+  useEffect(() => {
+    document.title = 'Register | Upcoming Seminar'
+  }, [])
+  
   const handleSubmit = (formData) => {
     setLoading(true)
+    const url = 'htt'
     fetch('https://winsmart-academy.onrender.com/api/register/', {
       method: 'POST',
       headers: {
@@ -25,7 +30,7 @@ const RegistrationPage = () => {
   }
   
   return (
-      <div className="max-w-3xl h-full bg-transparent backdrop-blur-3xl mt-6 flex flex-col mx-auto px-2">
+      <div className="max-w-3xl h-full bg-white backdrop-blur-3xl mt-15 flex flex-col mx-auto px-2">
         <h1 className="text-2xl text-blue-600 mb-3 text-center font-semibold">Deriv Seminar Registraion</h1>
         <p className="text-gray-400 text-sm text-center font-mono">Register for the upcoming seminar </p>
         
