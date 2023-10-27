@@ -11,7 +11,7 @@ const RegistrationPage = () => {
   
   const handleSubmit = (formData) => {
     setLoading(true)
-    const url = 'https://winsmart-academy.onrender.com/api/register'
+    const url = 'https://winsmart-academy.onrender.com/api/register/'
     fetch(url, {
       method: 'POST',
       headers: {
