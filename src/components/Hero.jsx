@@ -1,5 +1,6 @@
 import Herobg from '../static/logobg.jpg'
 import { Link } from 'react-router-dom'
+import Countdown from './Countdown'
 
 const Hero = () => {
   return (
@@ -22,14 +23,14 @@ const Hero = () => {
       </article>
       <div className="w-full sm:w-[92%] h-60 bg-gray-100 px-3 py-4 absolute bottom-0">
         <div className="flex sm:flex-row flex-col w-full h-full px-1 justify-between">
-          <div className="w-full sm:w-1/2 h-44 sm:h-full bg-blue-600 rounded-lg">
-            {/*countdown timer*/}
+          <div className="w-full sm:w-1/2 h-52 sm:h-full bg-blue-600 rounded-lg -mx-1">
+            <Countdown />
           </div>
           
           <div className="w-full sm:w-1/2 h-full flex justify-between p-5 flex-col space-y-3">
-            <div className="flex space-x-5">
+            <div className="flex space-x-5 mt-4">
               <div>
-                <i className="fas fa-calender-days text-4xl text-white bg-blue-600 p-2 rounded-xl"></i>
+                <i className="fa fa-clock text-4xl text-white bg-blue-600 p-2 rounded-xl"></i>
               </div>
               <div>
                 <p>5th November, 2023</p>

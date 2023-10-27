@@ -8,7 +8,9 @@ const Layout = () => {
         <header className="bg-transparent backdrop-blur-2xl top-0 sticky  z-10 h-20 w-full">
           <div className="max-w-4xl mx-auto flex justify-between items-center p-4 h-20">
             <div className="overflow-hidden ">
+            <Link to="/">
               <img src={Logo} alt="WinsmartAcademy" className="w-36 h-24 object-cover" />
+            </Link>
             </div>
             <div className="">
               <Link to='/register'

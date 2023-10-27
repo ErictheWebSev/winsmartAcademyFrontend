@@ -11,8 +11,8 @@ const RegistrationPage = () => {
   
   const handleSubmit = (formData) => {
     setLoading(true)
-    const url = 'htt'
-    fetch('https://winsmart-academy.onrender.com/api/register/', {
+    const url = 'https://winsmart-academy.onrender.com/api/register'
+    fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -25,7 +25,8 @@ const RegistrationPage = () => {
       setMessage('Registration Successful check your email')
       alert('Registration Successful check your email')
     }).catch(err => {
-      alert(err)
+      alert("Couldn't reach server")
+      setLoading(false)
     })
   }
   
